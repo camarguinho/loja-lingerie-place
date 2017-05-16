@@ -33,7 +33,7 @@ input[type="text"],input[type="number"]{padding:5px;background-image:none;color:
 .InputText{color:#545B8F;}
 
 /* Scroll To The Top */
-.ScrollToTheTopFC{font-size:11px;}
+.ScrollToTheTopFC{font-size:11px; display: none;}
 
 /* Remove LeftBar of certain pages */
 .ProductDet .left-bar, .FCFreight .left-bar, .FCCheckoutSteps .left-bar, .FCPayment .left-bar, .FCContact .left-bar, .ProductDet #idDivPath, .ProductDet #idDivSearch, .ProductDet .Titulos,.ProductList .Titulos, .FCCart .left-bar,.FCRegister .left-bar, .FCNews .left-bar, .FCHelp .left-bar, .FCTrack .left-bar, .FCNewsletter .left-bar, .FCRecommend .left-bar, .FCAdvancedSearch .left-bar, .FCRateProd .left-bar{display:none !important;}
@@ -217,7 +217,7 @@ a #HeaderCartTotalFC{color:#ff3355;<tag-FCCSSColor18>;position:relative;top:3px;
 .FCToolBarLogo{width:177px;height:52px;float:left;background:transparent;margin:3px 0 0 0;text-align:center;line-height:52px;}
 .FCToolBarLogo img{max-width:100%;max-height:100%;vertical-align:middle;}
 .FCToolBarForm{float:left;margin:0;width:39%;position:relative;}
-.FCToolBarForm input[type="text"]{padding-top:4px;padding-bottom:3px;width:331px;height:37px;margin:10px 0 0 0;float:left;opacity:0.5;padding:0 0 0 10px !important;}
+.FCToolBarForm input[type="text"]{padding-top:4px;padding-bottom:3px;width:200px;height:30px;margin:10px 0 0 0;float:left;opacity:0.5;padding:0 0 0 10px !important;}
 .FCToolBarButton{border:0;width:51px;height:37px;cursor:pointer;float:left;margin:10px 0 0 0;padding:3px 0 0 0;}
 .FCToolBarChatTel{text-align:center;width:133px;height:40px;margin:10px 15px 0 5px;display:block;float:left;}
 .FCToolBarChatTel p{color:#ff3355;<tag-FCCSSColor7>;font-size:14px;font-weight:bold;display:block;margin:12px 0;}
@@ -270,7 +270,7 @@ a #HeaderCartTotalFC{color:#ff3355;<tag-FCCSSColor18>;position:relative;top:3px;
 .DivHomeProd{cursor:pointer !important;width:100%;margin-top:10px;margin-bottom:10px;padding:1em;display:inline-block;box-sizing:border-box;border-top-style:solid;border-top-width:1px;border-left-style:solid;border-left-width:1px;border-right-style:solid;border-right-width:2px;border-bottom-style:solid;border-bottom-width:3px;border:1px solid <tag-FCCSSColor8>;border-top-color:<tag-FCCSSColor8>;border-left-color:<tag-FCCSSColor8>;border-right-color:<tag-FCCSSColor8>;border-bottom-color:<tag-FCCSSColor8>;}
 .DivHomeProd:hover{border-radius:5px;box-shadow:0 0 5px 0 <tag-FCCSSColor10>, 0 3px 0 <tag-FCCSSSecondMainColor>;}
 .DivHomeImagemProd{float:left;padding:0.2em 1em 0.6em 1em;box-sizing: border-box;min-height:120px;}
-.DivHomeImagemProd .EstImgFC{max-width:120px;max-height:100px;border:1px solid <tag-FCCSSColor17>;}
+.DivHomeImagemProd .EstImgFC{max-width: 250px; border:1px solid <tag-FCCSSColor17>;}
 .DivHomeNomeProd{max-width:222px;width:100%;font-size:0.9em;height:40px;box-sizing:border-box;font-family:'Open Sans',verdana,arial;font-weight:400;color:<tag-FCCSSMainColor>; }
 .DivIntHomeProd{float:left;width:50%;}
 .DivHomePriceProd{text-align:left;}
@@ -462,7 +462,7 @@ a #HeaderCartTotalFC{color:#ff3355;<tag-FCCSSColor18>;position:relative;top:3px;
 
 /* ProdDet SocialLinks */
 .SocialProdLinks{float:right;max-width:300px;min-height:30px;margin:5px 0 0 0;}
-.FooterSocialIcons{margin:initial !important;max-width:150px;}
+.FooterSocialIcons{margin:initial !important;}
 .ProdRating{float:left;}
 .ProdRating a{text-decoration:underline;color:<tag-FCCSSColor7>;}
 .ProdRating + .ProdRating{padding:16px 0 0 7px !important;}
@@ -761,14 +761,14 @@ table[name="TabEnvioInt"] td{vertical-align:middle;padding:5px 5px;}
   .DivHomeImagemProd{float:none;}
   .DivListProdImagemProd{float:none;}
   .last-prod{display:none;}
-  .DivListProd{height:430px;}
+  .DivListProd{height:450px;}
   .FooterTecBoxFC{line-height:66px;min-height:66px;}
 }
 
 /* m-Large */
 @media only screen and (min-width:1366px){
   .last-prod{display:block !important; }
-  .DivListProd{height:430px;}
+  .DivListProd{height:450px;}
   .FooterTecBoxFC{line-height:66px;min-height:66px;}
 }
 
@@ -783,7 +783,7 @@ table[name="TabEnvioInt"] td{vertical-align:middle;padding:5px 5px;}
   .DivHomeImagemProd{float:none;}
   .DivListProdImagemProd{float:none;}
   .last-prod{display:block;}
-  .DivListProd{height:430px;}
+  .DivListProd{height:450px;}
   .FooterTecBoxFC{line-height:66px;min-height:66px;}
 }
 

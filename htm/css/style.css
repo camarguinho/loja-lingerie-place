@@ -1,11 +1,22 @@
 /* Custom CSS */
+.header {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-position: center;
+  }
+
 .navbar {
   background-color: #ffc0cb;
   z-index: 9999;
   color: #ff3355;
   font-size: 2em;
   font-family:'Tangerine',Arial,serif;font-weight:400;
-  height: 65px;
+  height: 56px;
 }
 
 .navbar-inverse{
@@ -20,17 +31,22 @@
 
 .navbar li a, .navbar .navbar-brand {
   color: #ff3355 !important;
+  text-align: right;
 }
 
 .navbar-nav li a:hover, .navbar-nav li.active a {
   color: white !important;
   background-color: #ff99aa !important;
+  text-decoration: none;
+  height: 56px;
 }
 
 .navbar-default .navbar-toggle {
   border-color: transparent;
   color: #F9E32D !important;
+  padding: 0px;
 }
+
 
 .body-custom {
       background: red; /* For browsers that do not support gradients */
@@ -38,15 +54,6 @@
       background: -o-linear-gradient(-90deg, pink, pink, pink, white); /* For Opera 11.1 to 12.0 */
       background: -moz-linear-gradient(-90deg, pink, pink, pink, white); /* For Firefox 3.6 to 15 */
       background: linear-gradient(-90deg, pink, pink, pink, white); /* Standard syntax (must be last) */
-}
-
-.itens-cat ul li:hover {
-  color: white !important;
-  background-color: pink !important;
-}
-
-.itens-cat ul li a:hover {
-  text-decoration: none;
 }
 
 .qrcode {
@@ -80,50 +87,9 @@
     box-shadow: -5px 5px 5px silver;
 }
 
-.nav-linge li {
-  white-space: nowrap;
-  background: pink;
-}
-
-.nav-linge img {
-  display: none;
-  background: pink;
-}
-
 .login-linge {
   padding-top: 0.20em;
 }
-
-#nav-categ {
-  white-space: nowrap;
-  min-height: 48px;
-  text-align: center;
-  background: pink;
-  padding: 0.75em;
-  background: -webkit-linear-gradient(360deg, pink, white); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(360deg, pink, white); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(360deg, pink, white); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(360deg, pink, white); /* Standard syntax (must be last) */
-}
-
-#nav-categ ul{
-  list-style:none;
-}
-
-#nav-categ ul li{
-  display: inline;
-}
-
-#nav-categ ul li a{
-  font-size: 1.75em;
-  letter-spacing: 0.1em;
-  font-family:'Tangerine',Arial,serif;font-weight:400;
-  text-decoration: none;
-}
-
-#nav-categ .left-bar h2, .EstListCat li {
-  border-bottom: 0px;
-} 
 
 .itens-cat-nav ul li:hover {
   background-color: none !important;
@@ -138,6 +104,15 @@
   background-image: url("https://www.rumo.com.br/lojas/00033555/images/Fotolia_117921446_S.jpg");
   background-repeat: fixed no-repeat;
   -webkit-background-size: cover; -o-background-size: cover; -moz-background-size: cover; background-size: cover; 
+}
+
+#footer-diamond li a:hover {
+  text-decoration: none;
+}
+
+#footer-diamond li a:hover, .dropdown:hover .dropbtn {
+    background-color: transparent;
+    text-decoration: none;
 }
 
 #idBadgeAllFC {
@@ -156,6 +131,10 @@
   color: #515967;
 }
 
+.div-contact-address a:hover {
+  text-decoration: none;
+}
+
 .row {
   margin: 0px;
 }
@@ -167,3 +146,65 @@
     margin-top: -5px;
     margin-left: -6.25px;
   }
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: pink;
+}
+
+li.dropdown {
+    display: inline-block;
+    float: right;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: pink;
+    min-width: 160px;
+    z-index: 1;
+    right: 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.btn_custom {
+    text-align: center;
+    font-size: 25px;
+    color: #333;
+    border: 0;
+    box-shadow: 0 0 5px 0 #ccc;
+    text-transform: capitalize;
+    outline-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+}
+
+#topcontrol{
+  display: none;
+}
+
+.bag {
+  font-family: Verdana;
+}
+
+.bag-img {
+  padding-top: 5px;
+}
