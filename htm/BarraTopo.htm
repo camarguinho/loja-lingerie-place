@@ -5,6 +5,10 @@
   IDLojaNum='<IDLojaNum>';
   </script>
 
+  <link type="text/css" rel="stylesheet" href="/icons/GlyphiconsV2/font/glyphicons.css" media="all">
+
+  <link type="text/css" rel="stylesheet" href="/icons/GlyphiconsV2/font/style.css" media="all">
+
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" crossorigin="anonymous">
 
   <script>FCLib$.loadAsyncCSS('<PathTo file="htm/css/style.css">');</script>
@@ -67,8 +71,8 @@
           </form>
 
           <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown">Categorias <span class='caret'></span></a>
+            <li class="dropdown visible-xs">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categorias <span class='caret'></span></a>
               <ul class="dropdown-menu" style="font-size: 0.75em;">
                 <li>
                   <a href="/c/calcinhas-49045962">Calcinhas</a>
@@ -91,36 +95,42 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Op&ccedil;&otilde;es <span class='caret'></span></a>
               <ul class="dropdown-menu" style="font-size: 0.75em;">
-                <li><tag-FCHeaderMenuContact></li>
+                <li><a href="/faleconosco.asp?idloja=<IDLojaNum>">Contato <span class="glyphicons glyphicons-envelope"></span></a></li>
 
-                <li><a href="/indique.asp?idloja=<IDLojaNum>"><tag-FCFooterAccountMenu6></a></li>
+                <li><a href="/indique.asp?idloja=<IDLojaNum>">Indique a Loja <span class="glyphicons glyphicons-star-empty"></span></a></li>
 
-                <li><a href="/newsletter.asp?idloja=<IDLojaNum>"><tag-FCFooterAccountMenu5></a></li>
+                <li><a href="/newsletter.asp?idloja=<IDLojaNum>">Newsletter> <span class="glyphicons glyphicons-newspaper"></span></a></li>
 
-                <li><tag-FCFooterProductsMenu3></tli>
+                <li><a href="/prod,idloja,<IDLojaNum>,promocao,1,ofertas.htm">Promo&ccedil;&otilde;es <span class="glyphicons glyphicons-tags"></span></a></li>
 
-                <li><a href="/buscaavancada.asp?idloja=<IDLojaNum>"><tag-FCFooterProductsMenu6></a></tli>
+                <li><a href="/buscaavancada.asp?idloja=<IDLojaNum>">Busca Detalhada <span class="glyphicons glyphicons-search"></span></a></tli>
               </ul>
             </li>
 
             <li class="dropdown">
               <script>
                if(""!="<NomeCliente>")
-                {document.write("<a class='dropdown-toggle' data-toggle='dropdown'><NomeCliente> <span class='caret'></span></a>")}
+                {document.write("<a class='dropdown-toggle' data-toggle='dropdown' style='font-family: Verdana; font-size: 0.5em'>Olá, <NomeCliente> <span class='caret'></span></a>")}
                else
-                {document.write("<a class='dropdown-toggle' data-toggle='dropdown' href='cadastro.asp?IDLoja=<IDLoja>&pp=3' target='_top'>Login <span class='caret'></span></a>")}
+                {document.write("<a class='dropdown-toggle' data-toggle='dropdown' target='_top'>Olá, visitante! <span class='caret'></span></a>")}
               </script>
               <ul class="dropdown-menu" style="font-size: 0.75em;">
-                <li><a href="/account.asp?idloja=<IDLojaNum>">Meu Cadastro</a></li>
+                <script>
+                 if(""=="<NomeCliente>")
+                  {document.write("<li><a href='/cadastro.asp?idloja=<IDLojaNum>&pp=3&passo=1&sit=1'>Login ou Cadastro <span class='glyphicons glyphicons-log-in'></span></a></li>")}
+                </script>
 
-                <li><tag-FCHeaderMenuTrack></li>
+                <li><a href="/account.asp?idloja=<IDLojaNum>">Meus Dados <span class="glyphicons glyphicons-notes-2"></span></a></li>
 
-                <li><a href="/addProduto.asp?idloja=33555">Sacola: R$ <ValorCesta></a></li>
+                <li><a href="/account.asp?idloja=<IDLojaNum>&orders=1
+                ">Meus Pedidos <span class="glyphicons glyphicons-cargo"></span></a></li>
 
-                <li><a href="/addProduto.asp?idloja=33555">Itens: <QtdCesta></a></li>
+                <li><a href="/addProduto.asp?idloja=<IDLojaNum>">Sacola: R$ <ValorCesta> <span class="glyphicons glyphicons-shopping-bag"></span></a></li>
+
+                <li><a href="/addProduto.asp?idloja=<IDLojaNum>">Itens: <QtdCesta> <span class="glyphicons glyphicons-shopping-cart"></span></a></li>
                 <script>
                  if(""!="<NomeCliente>")
-                  {document.write("<li><a href='cadastro.asp?IDLoja=<IDLoja>&pp=3&logoff=1' target='_top'>Sair</a></li>")}
+                  {document.write("<li><a href='cadastro.asp?IDLoja=<IDLoja>&pp=3&logoff=1' target='_top'>Sair <span class='glyphicons glyphicons-log-out'></span></a></li>")}
                 </script>
               </ul>
             </li>
