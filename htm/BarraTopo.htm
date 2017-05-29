@@ -5,18 +5,12 @@
   IDLojaNum='<IDLojaNum>';
   </script>
 
-  <link type="text/css" rel="stylesheet" href="/icons/GlyphiconsV2/font/glyphicons.css" media="all">
-
-  <link type="text/css" rel="stylesheet" href="/icons/GlyphiconsV2/font/style.css" media="all">
-
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" crossorigin="anonymous">
 
   <script>FCLib$.loadAsyncCSS('<PathTo file="htm/css/style.css">');</script>
 
   <!-- Includes CSS -->
-  <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
 
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -24,7 +18,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="/wave/V3/waveMin.css?cccfc=1">
+
   <script>FCLib$.loadAsyncCSS('<PathTo file="htm/css/jquery_ui.css">');</script>
+
   <script>iItensCesta=<QtdCesta>;</script>
 
   <!--[if IE]><style type="text/css">.ui-autocomplete-category{margin-top: -2px}</style><![endif]-->
@@ -51,13 +47,13 @@
               <span class="icon-bar"></span>
           </button>
           <a href="http://www.lingerieplace.com.br" id="logo">
-            <img class="img-rounded logo" src="https://www.rumo.com.br/lojas/00033555/images/1_lingerie_place_logo_on_transparent_150x46.png" alt="logo">
+            <img width="150px" height="46px" class="img-rounded logo" src="https://www.rumo.com.br/lojas/000<IDLojaNum>/images/1_lingerie_place_logo_on_transparent_150x46.png" alt="logo">
           </a>
         </div>
       
         <div class="collapse navbar-collapse navbar-right" id="myNavbar1" style="background-color: pink">
 
-        <a href="/addProduto.asp?idloja=33555"><img class="img-fluid slide-image bag-img" src="https://www.rumo.com.br/lojas/00033555/images/bag.png" style="font-family: Verdana; padding-top: 5px;"> <span class="badge bag"><QtdCesta></span></a>
+        <a href="/addProduto.asp?idloja=<IDLojaNum>"><img height="40px" width="40px" class="img-fluid slide-image bag-img" src="https://www.rumo.com.br/lojas/000<IDLojaNum>/images/bag.png" style="font-family: Verdana; padding-top: 5px;"> <span class="badge bag"><QtdCesta></span></a>
 
           <form name=FormBuscaSimples method=GET action="ListaProdutos.asp" class="navbar-form navbar-left" style="height:40px; font-family: Verdana;">
             <div class="input-group">
@@ -95,15 +91,15 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Op&ccedil;&otilde;es <span class='caret'></span></a>
               <ul class="dropdown-menu" style="font-size: 0.75em;">
-                <li><a href="/faleconosco.asp?idloja=<IDLojaNum>">Contato <span class="glyphicons glyphicons-envelope"></span></a></li>
+                <li><a href="/faleconosco.asp?idloja=<IDLojaNum>">Contato <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></li>
 
-                <li><a href="/indique.asp?idloja=<IDLojaNum>">Indique a Loja <span class="glyphicons glyphicons-star-empty"></span></a></li>
+                <li><a href="/indique.asp?idloja=<IDLojaNum>">Indique a Loja <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></a></li>
 
-                <li><a href="/newsletter.asp?idloja=<IDLojaNum>">Newsletter> <span class="glyphicons glyphicons-newspaper"></span></a></li>
+                <li><a href="/newsletter.asp?idloja=<IDLojaNum>">Newsletter <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span></a></li>
 
-                <li><a href="/prod,idloja,<IDLojaNum>,promocao,1,ofertas.htm">Promo&ccedil;&otilde;es <span class="glyphicons glyphicons-tags"></span></a></li>
+                <li><a href="/prod,idloja,<IDLojaNum>,promocao,1,ofertas.htm">Promo&ccedil;&otilde;es <span class="glyphicon glyphicon-tags" aria-hidden="true"></span></a></li>
 
-                <li><a href="/buscaavancada.asp?idloja=<IDLojaNum>">Busca Detalhada <span class="glyphicons glyphicons-search"></span></a></tli>
+                <li><a href="/buscaavancada.asp?idloja=<IDLojaNum>">Busca Detalhada <span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></tli>
               </ul>
             </li>
 
@@ -117,20 +113,20 @@
               <ul class="dropdown-menu" style="font-size: 0.75em;">
                 <script>
                  if(""=="<NomeCliente>")
-                  {document.write("<li><a href='/cadastro.asp?idloja=<IDLojaNum>&pp=3&passo=1&sit=1'>Login ou Cadastro <span class='glyphicons glyphicons-log-in'></span></a></li>")}
+                  {document.write("<li><a href='/cadastro.asp?idloja=<IDLojaNum>&pp=3&passo=1&sit=1'>Login ou Cadastro <span class='glyphicon glyphicon-log-in' aria-hidden='true'></span></a></li>")}
                 </script>
 
-                <li><a href="/account.asp?idloja=<IDLojaNum>">Meus Dados <span class="glyphicons glyphicons-notes-2"></span></a></li>
+                <li><a href="/account.asp?idloja=<IDLojaNum>">Meus Dados <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></a></li>
 
                 <li><a href="/account.asp?idloja=<IDLojaNum>&orders=1
-                ">Meus Pedidos <span class="glyphicons glyphicons-cargo"></span></a></li>
+                ">Meus Pedidos <span class="glyphicon glyphicon-gift" aria-hidden="true"></span></a></li>
 
-                <li><a href="/addProduto.asp?idloja=<IDLojaNum>">Sacola: R$ <ValorCesta> <span class="glyphicons glyphicons-coins"></span></a></li>
+                <li><a href="/addProduto.asp?idloja=<IDLojaNum>">Sacola: R$ <ValorCesta> <span class="glyphicon glyphicon-usd" aria-hidden="true"></span></a></li>
 
-                <li><a href="/addProduto.asp?idloja=<IDLojaNum>">Itens: <QtdCesta> <span class="glyphicons glyphicons-shopping-bag"></span></a></li>
+                <li><a href="/addProduto.asp?idloja=<IDLojaNum>">Itens: <QtdCesta> <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></li>
                 <script>
                  if(""!="<NomeCliente>")
-                  {document.write("<li><a href='cadastro.asp?IDLoja=<IDLoja>&pp=3&logoff=1' target='_top'>Sair <span class='glyphicons glyphicons-log-out'></span></a></li>")}
+                  {document.write("<li><a href='cadastro.asp?IDLoja=<IDLoja>&pp=3&logoff=1' target='_top'>Sair <span class='glyphicon glyphicon-log-out' aria-hidden='true'></span></a></li>")}
                 </script>
               </ul>
             </li>
@@ -180,19 +176,12 @@
   <!-- Begin: bottom up -->
   <div class="row" style="position: fixed; bottom: 110px; right: 20px; opacity: 1; cursor: pointer;">
       <a href="#myPage" title="Topo" id="buttom-up">
-        <img src="https://www.rumo.com.br/lojas/00033555/images/up.png" alt="Topo" title="Topo"> 
+        <img width="48px" height="48px" src="https://www.rumo.com.br/lojas/000<IDLojaNum>/images/up.png" alt="Topo" title="Topo"> 
       </a>
     </div>
   </div>
   <script>var w=jQuery(window).width();w>1024&&ToolbarCartExec();</script>
   <!-- End: bottom up -->
-
-  <!-- Frete -->
-  <script type=""text/javascript"">
-  IDLoja='<IDLoja>'; //Obtém IDLoja para montar links
-  IDLojaNum='<IDLojaNum>';
-  </script>
-  <!-- Frete -->
 
   <!-- Receive Banner Home -->
   <div id="FC-ShowHomeBanners"></div>
