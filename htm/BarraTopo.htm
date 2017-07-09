@@ -1,4 +1,4 @@
-  <!-- Includes CSS -->
+<!-- Includes CSS -->
   <script language=JavaScript src=<BaseLoja>htm/SimulaFreteFC.js></script>
   <script type="text/javascript">
   IDLoja='<IDLoja>'; //Obtém IDLoja para montar links
@@ -6,7 +6,6 @@
   </script>
 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" crossorigin="anonymous">
-
   <script>FCLib$.loadAsyncCSS('<PathTo file="htm/css/style.css">');</script>
 
   <!-- Includes CSS -->
@@ -35,18 +34,77 @@
   <script>iItensCesta=<QtdCesta>;</script>
   <!--<script>$( "body" ).attr( "oncontextmenu", "return false" );</script>-->
 
+  <div id="mySidenav" class="sidenav visible-xs">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <br><br>
+
+    <script>
+     if(""!="<NomeCliente>")
+      {document.write("<a onclick='closeNav()'>Ol&aacute;, <NomeCliente></a>")}
+     else
+      {document.write("<a onclick='closeNav()'>Ol&aacute;, visitante!</a>")}
+    </script>
+
+    <script>
+     if(""=="<NomeCliente>")
+      {document.write("<a onclick='closeNav()' href='/cadastro.asp?idloja=<IDLojaNum>&pp=3&passo=1&sit=1'><span class='glyphicon glyphicon-log-in' aria-hidden='true'>&nbsp;</span>Login ou Cadastro </a>")}
+    </script>
+
+    <a onclick="closeNav()" href="<StoreDomain>"><span class="glyphicon glyphicon-home" aria-hidden="true">&nbsp;</span>Home</a>
+
+    <a onclick="closeNav()" href="/account.asp?idloja=<IDLojaNum>"><span class="glyphicon glyphicon-list-alt" aria-hidden="true">&nbsp;</span>Meus Dados</a>
+
+    <a onclick="closeNav()" href="/account.asp?idloja=<IDLojaNum>&orders=1
+    "><span class="glyphicon glyphicon-gift" aria-hidden="true">&nbsp;</span>Meus Pedidos</a>
+
+    <a onclick="closeNav()" href="/addProduto.asp?idloja=<IDLojaNum>"><span class="glyphicon glyphicon-usd" aria-hidden="true">&nbsp;</span>Sacola: R$ <ValorCesta></a>
+
+    <a onclick="closeNav()" href="/addProduto.asp?idloja=<IDLojaNum>"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">&nbsp;</span>Itens: <QtdCesta></a>
+
+    <a onclick="closeNav()" href="/buscaavancada.asp?idloja=<IDLojaNum>"><span class="glyphicon glyphicon-search" aria-hidden="true">&nbsp;</span>Busca Detalhada</a>
+                
+    <script>
+     if(""!="<NomeCliente>")
+      {document.write("<a onclick='closeNav()' href='cadastro.asp?IDLoja=<IDLoja>&pp=3&logoff=1'><span class='glyphicon glyphicon-log-out' aria-hidden='true'>&nbsp;</span>Sair</a>")}
+    </script>
+
+    <br><hr>
+
+    <a onclick="closeNav()" href="/c/calcinhas-49045962">Calcinhas</a>
+    <a onclick="closeNav()" href="/c/conjuntos-90584963">Conjuntos</a>
+    <a onclick="closeNav()" href="/c/espartilho-19904727">Espartilhos</a>
+    <a onclick="closeNav()" href="/c/roupas-de-dormir-48032779">Linha Noite</a>
+    <a onclick="closeNav()" href="/c/soutien-5440921">Soutien</a>
+
+    <br><hr>
+
+    <a onclick="closeNav()" href="/faleconosco.asp?idloja=<IDLojaNum>"><span class="glyphicon glyphicon-envelope" aria-hidden="true">&nbsp;</span>Contato</a>
+
+    <a onclick="closeNav()" href="/indique.asp?idloja=<IDLojaNum>"><span class="glyphicon glyphicon-star-empty" aria-hidden="true">&nbsp;</span>Indique a Loja</a>
+
+    <a onclick="closeNav()" href="/newsletter.asp?idloja=<IDLojaNum>"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true">&nbsp;</span>Newsletter</a>
+
+    <a onclick="closeNav()" href="/prod,idloja,<IDLojaNum>,promocao,1,ofertas.htm"><span class="glyphicon glyphicon-tags" aria-hidden="true">&nbsp;</span>Promo&ccedil;&otilde;es</a>
+
+    <a onclick="closeNav()" href="/prod,idloja,<IDLojaNum>,lancamento,1,novidades.htm"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true">&nbsp;</span>Novidades</a>
+
+    <a onclick="closeNav()" href="/page,idloja,<IDLojaNum>,arq,destaques.htm"><span class="glyphicon glyphicon-flag" aria-hidden="true">&nbsp;</span>Destaques</a>
+
+    <br>
+  </div>
+
   <div id="myPage" class="container" data-spy="scroll" data-target=".navbar" data-offset="60">
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top body-custom">
       <div class="container-fluid">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar1">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" onclick="openNav()">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
           </button>
-          <a href="http://www.lingerieplace.com.br" id="logo">
+          <a href="<StoreDomain>">
             <img width="150px" height="46px" class="img-rounded logo" src="https://www.rumo.com.br/lojas/000<IDLojaNum>/images/1_lingerie_place_logo_on_transparent_150x46.png" alt="logo">
           </a>
         </div>
@@ -66,28 +124,7 @@
             </div>
           </form>
 
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown visible-xs">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categorias <span class='caret'></span></a>
-              <ul class="dropdown-menu" style="font-size: 0.75em;">
-                <li>
-                  <a href="/c/calcinhas-49045962">Calcinhas</a>
-                </li>
-                <li>
-                  <a href="/c/conjuntos-90584963">Conjuntos</a>
-                </li>
-                <li>
-                  <a href="/c/espartilho-19904727">Espartilhos</a>
-                </li>
-                <li>
-                  <a href="/c/roupas-de-dormir-48032779">Linha Noite</a>
-                </li>
-                <li>
-                  <a href="/c/soutien-5440921">Soutien</a>
-                </li>
-              </ul>
-            </li>
-
+          <ul class="nav navbar-nav navbar-right hidden-xs">
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Op&ccedil;&otilde;es <span class='caret'></span></a>
               <ul class="dropdown-menu" style="font-size: 0.75em;">
@@ -99,7 +136,7 @@
 
                 <li><a href="/prod,idloja,<IDLojaNum>,promocao,1,ofertas.htm">Promo&ccedil;&otilde;es <span class="glyphicon glyphicon-tags" aria-hidden="true"></span></a></li>
 
-                <li><a href="/buscaavancada.asp?idloja=<IDLojaNum>">Busca Detalhada <span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></tli>
+                <li><a href="/buscaavancada.asp?idloja=<IDLojaNum>">Busca Detalhada <span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></li>
               </ul>
             </li>
 
@@ -174,7 +211,7 @@
   <br/><br/><br/>
 
   <!-- Begin: bottom up -->
-  <div class="row" style="position: fixed; bottom: 110px; right: 20px; opacity: 1; cursor: pointer;">
+  <div class="row" style="position: fixed; bottom: 110px; right: 20px; opacity: 1; cursor: pointer; z-index: 1">
       <a href="#myPage" title="Topo" id="buttom-up">
         <img width="48px" height="48px" src="https://www.rumo.com.br/lojas/000<IDLojaNum>/images/up.png" alt="Topo" title="Topo"> 
       </a>
@@ -197,10 +234,8 @@
       if (this.hash !== "") {
         // Prevent default anchor click behavior
         event.preventDefault();
-
         // Store hash
         var hash = this.hash;
-
         // Using jQuery's animate() method to add smooth page scroll
         // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
         $('html, body').animate({
@@ -216,7 +251,6 @@
     $(window).scroll(function() {
       $(".slideanim").each(function(){
         var pos = $(this).offset().top;
-
         var winTop = $(window).scrollTop();
           if (pos < winTop + 600) {
             $(this).addClass("slide");
@@ -226,5 +260,14 @@
   })
   </script>
 
+  <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("myPage").style.marginLeft = "250px";
+    }
 
-      
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("myPage").style.marginLeft= "0";
+    }
+    </script>

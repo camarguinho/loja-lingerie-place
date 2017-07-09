@@ -101,9 +101,7 @@
 
     <!-- Begin Releases -->
     <div class="MainHomeBoxTitFC text-left font-16">
-
-      <h2><a href="/prod,idloja,33555,lancamento,1,novidades.htm"><tag-FCHomeTxtReleases></a></h2>
-
+      <h2><a href="/prod,idloja,<IDLojaNum>,lancamento,1,novidades.htm"><tag-FCHomeTxtReleases></a></h2>
     </div>
     <div class="row">
       <div class="col-small-12 col-medium-6 col-large-4 col-mlarge-3 col-xlarge-3"><prod out="p255" em="lanc,rand"></div>
@@ -115,8 +113,7 @@
 
     <!-- Begin Highlights -->
     <div class="MainHomeBoxTitFC text-left font-16">
-      <h2><a href="/page,idloja,33555,arq,destaques.htm"><tag-FCHomeTxtHighlights></a></h2>
-
+      <h2><a href="/page,idloja,<IDLojaNum>,arq,destaques.htm"><tag-FCHomeTxtHighlights></a></h2>
     </div>
     <div class="row">
       <div class="col-small-12 col-medium-6 col-large-4 col-mlarge-3 col-xlarge-3"><prod out="p255" em="capa,rand"></div>
@@ -143,6 +140,39 @@
   </div>
 </div>
 <!-- End Home -->
+
+<div class="row">
+  <div class="titlenews text-center">
+    Cadastre-se e receba novidades e promo&ccedil;&otilde;es incr&iacute;veis!
+  </div><br>
+</div>
+
+<div class="row">
+  <div id="newsPage" class="col-sm-12 header">
+    <div class="col-sm-6">
+      &nbsp;
+    </div>
+    <div class="col-sm-6">
+      <div class="row">
+        <br><br>
+        <form class="form-inline" id="formPopup" name=FormNewsletter method=GET action="Newsletter.asp" onSubmit="return ValidaNew();">
+          <input type=hidden name=IDLoja value="<idloja>">
+          <input type=hidden name=Y value="<Y>">
+          <input type=hidden name=FormatoHTML value="True">
+          <input type=hidden name=EnviarAssinante value="Enviar">
+
+          <label class="sr-only" for="inlineFormInput">Nome</label>
+          <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" required name=NomeAssinante placeholder="Nome" maxlength="60">
+
+          <label class="sr-only" for="inlineFormInputGroup">E-mail</label>
+          <input type="text" class="form-control" id="inlineFormInputGroup" required name=Email placeholder="E-mail" maxlength="60">
+          <button type="submit" class="form-control btn btn-primary">Cadastrar</button>
+        </form>
+        <br><br><br>
+      </div>      
+    </div>
+  </div>
+</div>
 
 <script>
 sF$.fnHideShowBannersHome();
